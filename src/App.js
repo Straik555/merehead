@@ -47,6 +47,7 @@ const App = ({loadingUsers, isLoading}) => {
                     <Route exact path={routes.home} component={ () => <Home />} />
                     <Route exact path={routes.register} component={ () => <Register />} />
                     <Route exact path={`${routes.updateUser}/:id`} component={ () => <UpdateUser />} />
+                    <Route render={() => <p>Page not found</p> } />
                 </Switch>
             ) : <Spinner />
         }
